@@ -7,7 +7,7 @@
 <mapper namespace="com.springboot.web_project.dao.UserDao">
 
     <select id="queryUserByName" resultType="Users" parameterType="String">
-        select *from springboot.user where name=#{name};
+        select * from springboot.user where name=#{name};
     </select>
 
 

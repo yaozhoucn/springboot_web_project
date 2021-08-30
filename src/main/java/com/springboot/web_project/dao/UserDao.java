@@ -7,5 +7,5 @@ import org.apache.catalina.User;
  * Desc：
  */
 public interface UserDao {
-    User login(String username, String password);
+    User queryUserByName(String username, String password);
 }
