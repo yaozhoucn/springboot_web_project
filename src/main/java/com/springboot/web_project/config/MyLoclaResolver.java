@@ -17,7 +17,6 @@ public class MyLoclaResolver implements LocaleResolver {
     public Locale resolveLocale(HttpServletRequest httpServletRequest) {
         //获取请求中的语言参数
         String language = httpServletRequest.getParameter("language");
-        System.out.println(language);
         //如果没有就使用默认值
         Locale locale = Locale.getDefault();
         if (!StringUtils.isEmpty(language)){
