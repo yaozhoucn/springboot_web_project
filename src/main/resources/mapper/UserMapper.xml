@@ -10,6 +10,4 @@
         select * from springboot.user where name=#{name};
     </select>
 
-
-
 </mapper>
