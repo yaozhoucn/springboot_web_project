@@ -16,12 +16,13 @@ public class MyMvConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("index.html","/","/user/login","css/*","js/*","img/*");
+                .excludePathPatterns("index.html","/","/login","/css/**"
+                        ,"/js/**","/img/**");
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index.html").setViewName("user/login");
+        registry.addViewController("/index.html").setViewName("/login");
     }
 
     @Bean

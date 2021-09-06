@@ -21,7 +21,7 @@ public class LoginController {
     private UserServiceImpl userService;
 
 
-    @RequestMapping("user/login")
+    @RequestMapping("/login")
     public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session){
        /* if (!StringUtils.isEmpty(username) && "123456".equals(password)){
             return "dashboard";
